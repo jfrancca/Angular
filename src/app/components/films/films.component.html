@@ -1,0 +1,10 @@
+<div class="contenedor">
+    <div class="card position" style="width: 18rem;" *ngFor="let film of films">
+        <img [src]="film.image" class="card-img-top" [alt]="film.title">
+        <div class="card-body">
+        <h5 class="card-title">{{ film.title }}</h5>
+        <p class="card-text">{{film.opening_crawl}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>
