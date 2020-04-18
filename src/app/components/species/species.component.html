@@ -1,0 +1,19 @@
+<div class="contenedor">
+    <h1 >Species</h1>
+    <div class="card position" style="width: 18rem;" *ngFor="let specie of species">
+        <img [src]="specie.image" class="card-img-top" [alt]="specie.name">
+        <div class="card-body">
+        <h5 class="card-name">{{ specie.name }}</h5>
+        <p class="card-text">classification: {{ specie.classification }}</p>
+        <p class="card-text">designation: {{ specie.designation }}</p>
+        <p class="card-text">average_height: {{ specie.average_height }}</p>
+        <p class="card-text">skin_colors: {{ specie.skin_colors }}</p>
+        <p class="card-text">hair_colors: {{ specie.hair_colors }}</p>
+        <p class="card-text">eye_colors: {{ specie.eye_colors }}</p>
+        <p class="card-text">average_lifespan: {{ specie.average_lifespan }}</p>
+        <p class="card-text">homeworld: {{ specie.homeworld }}</p>
+        <p class="card-text">language: {{ specie.language }}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>

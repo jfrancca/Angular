@@ -7,12 +7,14 @@ import { SwapiService } from './services/swapi.service';
 import { HttpClientModule } from "@angular/common/http";
 import { FilmsComponent } from './components/films/films.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SpeciesComponent } from './components/species/species.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmsComponent,
     NavbarComponent,
+    SpeciesComponent,
   ],
   imports: [
     BrowserModule,
