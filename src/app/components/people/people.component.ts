@@ -1,36 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { SwapiService } from 'src/app/services/swapi.service';
-import { Films, Result } from 'src/app/interfaces/swapi.interface';
+import { People, Result } from 'src/app/interfaces/swapi.interface';
 import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-films',
-  templateUrl: './films.component.html',
-  styleUrls: ['./films.component.css']
+  selector: 'app-people',
+  templateUrl: './people.component.html',
+  styleUrls: ['./people.component.css']
 })
-export class FilmsComponent implements OnInit {
+export class PeopleComponent implements OnInit {
 
   public films: Result[] = [];
-  public route = "../../assets/starwars/";
+  public route = "../../assets/people/";
 
   constructor(private swapi: SwapiService) { }
  
   ngOnInit(): void {
-    this.getFilm();
+    this.getPeopl();
   }
 
-  private async getFilm() {
-    await this.swapi.getFilms().pipe(
+  private async getPeopl() {
+    await this.swapi.getPeople().pipe(
       map((resp: any) => {
-        const result: Films = resp;
+        const result: People = resp;
         result.results.forEach(element => {
           element.image = element.image = this.route + element.title + ".png";
         });
         return result;
       })
-    ).subscribe( (resp: Films) => {
+    ).subscribe( (resp: People) => {
       console.log(resp.results);
-      this.films = resp.results;
+      this.people = resp.results;
     });
   }
 
