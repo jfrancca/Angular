@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { SwapiService } from './services/swapi.service';
 import { HttpClientModule } from "@angular/common/http";
 import { FilmsComponent } from './components/films/films.component';
+import { PeopleComponent } from './components/people/people.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmsComponent,
+    PeopleComponent,
     NavbarComponent,
   ],
   imports: [
