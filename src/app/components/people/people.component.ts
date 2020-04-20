@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class PeopleComponent implements OnInit {
 
-  public films: Result[] = [];
+  public people: Result[] = [];
   public route = "../../assets/people/";
 
   constructor(private swapi: SwapiService) { }

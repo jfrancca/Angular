@@ -4,6 +4,12 @@ export interface Films {
   previous?: any;
   results: Result[];
 }
+export interface People {
+  count: number;
+  next?: any;
+  previous?: any;
+  results: Result[];
+}
 
 export interface Result {
   title: string;
@@ -33,9 +39,4 @@ export interface Result {
   homeworld: string;
   films: string[];
 }
-export interface People {
-  count: number;
-  next?: any;
-  previous?: any;
-  results: Result[];
-}
+
