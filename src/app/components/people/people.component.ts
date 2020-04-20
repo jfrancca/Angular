@@ -24,7 +24,7 @@ export class PeopleComponent implements OnInit {
       map((resp: any) => {
         const result: People = resp;
         result.results.forEach(element => {
-          element.image = element.image = this.route + element.title + ".png";
+          element.image = element.image = this.route + element.name + ".png";
         });
         return result;
       })
