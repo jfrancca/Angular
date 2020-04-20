@@ -1,9 +1,16 @@
 <div class="contenedor">
-    <div class="card position" style="width: 18rem;" *ngFor="let film of films">
-        <img [src]="film.image" class="card-img-top" [alt]="film.title">
+    <div class="card position" style="width: 18rem;" *ngFor="let peopl of people">
+        <img [src]="peopl.image" class="card-img-top" [alt]="peopl.name">
         <div class="card-body">
-        <h5 class="card-title">{{ film.title }}</h5>
-        <p class="card-text">{{film.opening_crawl}}</p>
+        <h5 class="card-title">{{ peopl.name }}</h5>
+        <p class="card-text">{{peopl.height}}</p>
+        <p class="card-text">{{peopl.mass}}</p>
+        <p class="card-text">{{peopl.hair_color}}</p>
+        <p class="card-text">{{peopl.skin_color}}</p>
+        <p class="card-text">{{peopl.eye_color}}</p>
+        <p class="card-text">{{peopl.birth_year}}</p>
+        <p class="card-text">{{peopl.gender}}</p>
+        
         <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
     </div>
