@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { api } from "../../environments/environment";
 import { Films } from '../interfaces/swapi.interface';
 import { Species } from '../interfaces/swapi.interface';
+import { Starships } from '../interfaces/swapi.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -29,5 +30,15 @@ export class SwapiService {
 
     return this.http.get<Species>(uri);
   }
+  public getStarships(){
+    let uri = this.url + "starships/"
+    // console.log(this.http.get(uri));
+  
+    return this.http.get<Starships>(uri);
+  }
 
 }
+
+
+
+

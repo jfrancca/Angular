@@ -12,9 +12,17 @@ export interface Species {
   results: Result[];
 }
 
+export interface Starships {
+  count: number;
+  next?: any;
+  previous?: any;
+  results: Result[];
+}
+
 export interface Result {
   title: string;
   name: string;
+  model: string;
   episode_id: number;
   opening_crawl: string;
   director: string;

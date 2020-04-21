@@ -8,6 +8,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { FilmsComponent } from './components/films/films.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SpeciesComponent } from './components/species/species.component';
+//import { StarshipsComponent } from './components/starships/starships.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SpeciesComponent } from './components/species/species.component';
     FilmsComponent,
     NavbarComponent,
     SpeciesComponent,
+   // StarshipsComponent,
   ],
   imports: [
     BrowserModule,
