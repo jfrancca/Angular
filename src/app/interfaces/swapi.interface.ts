@@ -11,8 +11,16 @@ export interface People {
   results: Result[];
 }
 
+export interface Species {
+  count: number;
+  next?: any;
+  previous?: any;
+  results: Result[];
+}
+
 export interface Result {
   title: string;
+  name: string;
   episode_id: number;
   opening_crawl: string;
   director: string;
@@ -28,7 +36,7 @@ export interface Result {
   url: string;
   image?: string;
 
-  name: string;
+  
   height: string;
   mass: string;
   hair_color: string;
