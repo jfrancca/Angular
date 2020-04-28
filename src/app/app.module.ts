@@ -9,6 +9,9 @@ import { FilmsComponent } from './components/films/films.component';
 import { PeopleComponent } from './components/people/people.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SpeciesComponent } from './components/species/species.component';
+import { VehiclesComponent } from './components/vehicles/vehicles.component';
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -17,11 +20,14 @@ import { SpeciesComponent } from './components/species/species.component';
     PeopleComponent,
     NavbarComponent,
     SpeciesComponent,
+    VehiclesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [SwapiService],
   bootstrap: [AppComponent]

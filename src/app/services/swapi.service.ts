@@ -4,11 +4,17 @@ import { api } from "../../environments/environment";
 import { Films } from '../interfaces/swapi.interface';
 import { People } from '../interfaces/swapi.interface';
 import { Species } from '../interfaces/swapi.interface';
+import { Vehicles } from '../interfaces/vehicles.interface';
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class SwapiService {
-  
+  getPlanets(){
+    throw new Error("Method not implemented.");
+    
+  }
 
   private url = api;
 
@@ -33,6 +39,10 @@ export class SwapiService {
 
     return this.http.get<Species>(uri);
   }
+  public getVehicles(){
+    let uri = this.url + "vehicles/"
 
+    return this.http.get<Vehicles>(uri);
+  }
 
 }

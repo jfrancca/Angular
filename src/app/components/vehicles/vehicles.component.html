@@ -1,0 +1,23 @@
+<div class= "contenedor">
+    <div class="card position" style="width: 18rem;" *ngFor="let vehicle of vehicles">
+    <img [src]="vehicle.image" class ="card-img-top" [alt]="vehicle.name">
+    <div class="card-body">
+    <h5 class="card-name"> {{vehicle.name}}</h5>
+    <p class="card-text">name: {{vehicle.name}} </p>
+    <p class="card-text">model: {{vehicle.model}}</p>
+    <p class="card-text">manufacturer: {{vehicle.manufacturer}}</p>
+    <p class="card-text">cost_in_credits: {{vehicle.cost_in_credits}}</p>
+    <p class="card-text">length: {{vehicle.length}}</p>
+    <p class="card-text">max_atmosphering_speed: {{vehicle.max_atmosphering_speed}}</p>
+    <p class="card-text">crew: {{vehicle.crew}}</p>
+    <p class="card-text">passengers: {{vehicle.passengers}}</p>
+    <p class="card-text">cargo_capacity: {{vehicle.cargo_capacity}}</p>
+    <p class="card-text">consumables: {{vehicle.consumables}}</p>
+    <p class="card-text">vehicle_class: {{vehicle.vehicle_class}}</p>
+    <p class="card-text">pilots: {{vehicle.pilots}}</p>
+    <p class="card-text">fims: {{vehicle.fims}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>
+
