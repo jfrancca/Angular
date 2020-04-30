@@ -1,0 +1,11 @@
+<div class="contenedor">
+    <h1 >Starship</h1>
+    <div class="card position" style="width: 18rem;" *ngFor="let starship of starships">
+        <img [src]="starship.image" class="card-img-top" [alt]="starship.name">
+        <div class="card-body">
+        <h5 class="card-name">{{ starship.name }}</h5>
+        <p class="card-text">model: {{ starship.model }}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</div>

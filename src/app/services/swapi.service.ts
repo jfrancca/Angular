@@ -5,6 +5,7 @@ import { Films } from '../interfaces/swapi.interface';
 import { People } from '../interfaces/swapi.interface';
 import { Species } from '../interfaces/swapi.interface';
 import { Vehicles } from '../interfaces/vehicles.interface';
+import { Starships } from '../interfaces/swapi.interface';
 
 
 @Injectable({
@@ -43,6 +44,12 @@ export class SwapiService {
     let uri = this.url + "vehicles/"
 
     return this.http.get<Vehicles>(uri);
+  }
+  public getStarships(){
+    let uri = this.url + "starships/"
+    // console.log(this.http.get(uri));
+
+    return this.http.get<Starships>(uri);
   }
 
 }

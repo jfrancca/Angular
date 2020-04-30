@@ -9,6 +9,7 @@ import { FilmsComponent } from './components/films/films.component';
 import { PeopleComponent } from './components/people/people.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SpeciesComponent } from './components/species/species.component';
+import { StarshipsComponent } from './components/starships/starships.component';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 
@@ -21,6 +22,7 @@ import { ReactiveFormsModule, FormsModule } from "@angular/forms";
     NavbarComponent,
     SpeciesComponent,
     VehiclesComponent,
+    StarshipsComponent,
   ],
   imports: [
     BrowserModule,
