@@ -11,6 +11,13 @@ export interface People {
   results: Result[];
 }
 
+export interface Planets {
+  count: number;
+  next?: any;
+  previous?: any;
+  results: Result[];
+}
+
 export interface Result {
   title: string;
   episode_id: number;
@@ -38,5 +45,17 @@ export interface Result {
   gender: string;
   homeworld: string;
   films: string[];
+
+  rotation_period: string;
+  orbital_period: string;
+  diameter: string;
+  climate:  string;
+  gravity: string;
+  terrain: string;
+  surface_water: string;
+  population: string;
+
+
 }
+
 
