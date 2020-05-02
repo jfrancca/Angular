@@ -24,7 +24,7 @@ export class PlanetsComponent implements OnInit {
       map((resp: any) => {
         const result: Planets = resp;
         result.results.forEach(element => {
-          element.image = element.image = this.route + element.title + ".png";
+          element.image = element.image = this.route + element.name + ".png";
         });
         return result;
       })
