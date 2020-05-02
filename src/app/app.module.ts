@@ -7,6 +7,7 @@ import { SwapiService } from './services/swapi.service';
 import { HttpClientModule } from "@angular/common/http";
 import { FilmsComponent } from './components/films/films.component';
 import { PeopleComponent } from './components/people/people.component';
+import { PlanetsComponent } from './components/planets/planets.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SpeciesComponent } from './components/species/species.component';
 import { StarshipsComponent } from './components/starships/starships.component';
@@ -19,6 +20,7 @@ import { ReactiveFormsModule, FormsModule } from "@angular/forms";
     AppComponent,
     FilmsComponent,
     PeopleComponent,
+    PlanetsComponent,
     NavbarComponent,
     SpeciesComponent,
     VehiclesComponent,

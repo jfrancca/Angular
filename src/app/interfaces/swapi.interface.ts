@@ -11,6 +11,13 @@ export interface People {
   results: Result[];
 }
 
+export interface Planets {
+  count: number;
+  next?: any;
+  previous?: any;
+  results: Result[];
+}
+
 export interface Species {
   count: number;
   next?: any;
@@ -44,7 +51,7 @@ export interface Result {
   url: string;
   image?: string;
 
-  
+
   height: string;
   mass: string;
   hair_color: string;
@@ -54,5 +61,25 @@ export interface Result {
   gender: string;
   homeworld: string;
   films: string[];
+
+  rotation_period: string;
+  orbital_period: string;
+  diameter: string;
+  climate:  string;
+  gravity: string;
+  terrain: string;
+  surface_water: string;
+  population: string;
+
+  classification: string;
+  designation: string;v
+  average_height: string;
+  skin_colors: string;
+  hair_colors: string;
+  eye_colors: string;
+  average_lifespan:string;
+  language: string;
+
 }
+
 
