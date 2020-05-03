@@ -1,15 +1,17 @@
 <div class="contenedor">
+    <hr style="border-color:black;">
+    <h1 >Planets</h1>
     <div class="card position" style="width: 18rem;" *ngFor="let planet of planets">
         <img [src]="planet.image" class="card-img-top" [alt]="planet.name">
         <div class="card-body">
         <h5 class="card-title">{{ planet.name }}</h5>
-        <p class="card-text">{{planet.orbital_period}}</p>
-        <p class="card-text">{{planet.diameter}}</p>
-        <p class="card-text">{{planet.climate}}</p>
-        <p class="card-text">{{planet.gravity}}</p>
-        <p class="card-text">{{planet.terrain}}</p>
-        <p class="card-text">{{planet.surface_water}}</p>
-        <p class="card-text">{{planet.population}}</p>
+        <p class="card-text">orbital_period: {{planet.orbital_period}}</p>
+        <p class="card-text">diameter: {{planet.diameter}}</p>
+        <p class="card-text">climate: {{planet.climate}}</p>
+        <p class="card-text">gravity: {{planet.gravity}}</p>
+        <p class="card-text">terrain: {{planet.terrain}}</p>
+        <p class="card-text">surface_water: {{planet.surface_water}}</p>
+        <p class="card-text">population: {{planet.population}}</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
     </div>
