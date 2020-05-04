@@ -1,5 +1,52 @@
+
+
+<style style type="text/css">
+    * {
+            padding:0px;
+            margin:0px;
+        }
+    #header {
+            margin:auto;
+            width:1300px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+    ul, ol {
+            list-style:none;	
+        }
+    .nav li a {
+            background-color:#000;
+            color:#fff;
+            text-decoration:none;
+            padding:10px 15px;
+            display:block;
+        }
+    .nav > li {
+            float:left;
+        }
+    .nav li a:hover {
+            background-color:#0e0606;
+    }
+    .nav li ul {
+            display:none;
+            position:absolute;
+            min-width:140px;
+    }	
+    .nav li:hover > ul {
+        display:block;
+    }
+    .nav li ul li {
+        position:relative;
+    }
+    .nav li ul li ul {
+        right:-140px;
+        top:0px;
+    }	
+    </style>
+
+<!--Menu --->
 <img src="assets\Star Wars.png" class="img-fluid" style="position: absolute; right: 0; top: 0; z-index: -100;">
-<ul>
+<div id="header">
+<ul class="nav">
     <li>
         <a routerLink= "/Peliculas" > Films</a>
     </li>
@@ -19,6 +66,7 @@
         <a routerLink= "/Vehiculos" > Vehicles</a>
     </li>
 </ul>
+</div>
 
 <!--app-films ></app-films>
 <app-people></app-people>

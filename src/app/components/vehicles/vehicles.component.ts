@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SwapiService } from 'src/app/services/swapi.service';
+import { Vehicles, Result } from 'src/app/interfaces/vehicles.interface';
 import { map } from 'rxjs/operators';
-import { Vehicles, Result } from "../../interfaces/vehicles.interface";
-
 
 @Component({
   selector: 'app-vehicles',
@@ -10,13 +9,26 @@ import { Vehicles, Result } from "../../interfaces/vehicles.interface";
   styleUrls: ['./vehicles.component.css']
 })
 export class VehiclesComponent implements OnInit {
-  public vehicles: Result[];
-  public route =  "../../assets/vehicles/";
+  
+  public palabra: String = '';
+  public vehicles: Result[] = [];
+  public filtroVehicles: Result[] = [];
+  public route = "../../assets/vehicles/";
 
   constructor(private swapi: SwapiService) { }
-
+ 
   ngOnInit(): void {
     this.getVehicles();
+  }
+
+  public search(text: string) {
+    if (text.length > 0) {
+      this.palabra = text;
+      var filtro: Result[] = this.vehicles.filter(vehicle => vehicle.name == text);
+      this.vehicles = filtro;
+    } else {
+      this.vehicles = this.filtroVehicles;
+    }
   }
 
   private async getVehicles() {
@@ -31,11 +43,12 @@ export class VehiclesComponent implements OnInit {
     ).subscribe( (resp: Vehicles) => {
       console.log(resp.results);
       this.vehicles = resp.results;
+      this.filtroVehicles = resp.results;
     });
   }
 
 }
-  
+
 
     
   

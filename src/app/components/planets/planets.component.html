@@ -1,6 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">STAR WARS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href= "../planets/planets.component.html">Planets<span class="sr-only">(current)</span></a>
+         <!--a class="nav-link" href="../species/species.component.html">Species<span class="sr-only">(current)</span></a>-->
+        
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" (ngModelChange)="search($event)" [(ngModel)]="palabra" name="palabra" type="search" placeholder="Search" aria-label="Search">
+      </form>
+    </div>
+</nav>
 <div class="contenedor">
-    <hr style="border-color:black;">
-    <h1 >Planets</h1>
+  <hr style="border-color:black;">
+  <h1 >Planets</h1>
     <div class="card position" style="width: 18rem;" *ngFor="let planet of planets">
         <img [src]="planet.image" class="card-img-top" [alt]="planet.name">
         <div class="card-body">

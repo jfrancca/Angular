@@ -1,24 +1,43 @@
-<div class= "contenedor">
-    <hr style="border-color:black;">
-    <h1 >Vehicles</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">STAR WARS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href= "../vehicles/vehicles.component.html">Vehicles<span class="sr-only">(current)</span></a>
+         <!--a class="nav-link" href="../species/species.component.html">Species<span class="sr-only">(current)</span></a>-->
+        
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" (ngModelChange)="search($event)" [(ngModel)]="palabra" name="palabra" type="search" placeholder="Search" aria-label="Search">
+      </form>
+    </div>
+</nav>
+<div class="contenedor">
+  <hr style="border-color:black;">
+  <h1 >Vehicles</h1>
     <div class="card position" style="width: 18rem;" *ngFor="let vehicle of vehicles">
-    <img [src]="vehicle.image" class ="card-img-top" [alt]="vehicle.name">
-    <div class="card-body">
-    <h5 class="card-name"> {{vehicle.name}}</h5>
-    <p class="card-text">name: {{vehicle.name}} </p>
-    <p class="card-text">model: {{vehicle.model}}</p>
-    <p class="card-text">manufacturer: {{vehicle.manufacturer}}</p>
-    <p class="card-text">cost_in_credits: {{vehicle.cost_in_credits}}</p>
-    <p class="card-text">length: {{vehicle.length}}</p>
-    <p class="card-text">max_atmosphering_speed: {{vehicle.max_atmosphering_speed}}</p>
-    <p class="card-text">crew: {{vehicle.crew}}</p>
-    <p class="card-text">passengers: {{vehicle.passengers}}</p>
-    <p class="card-text">cargo_capacity: {{vehicle.cargo_capacity}}</p>
-    <p class="card-text">consumables: {{vehicle.consumables}}</p>
-    <p class="card-text">vehicle_class: {{vehicle.vehicle_class}}</p>
-    <p class="card-text">pilots: {{vehicle.pilots}}</p>
-    <p class="card-text">fims: {{vehicle.fims}}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+        <img [src]="vehicle.image" class="card-img-top" [alt]="vehicle.name">
+        <div class="card-body">
+        <h5 class="card-title">{{ vehicle.name }}</h5>
+        <p class="card-text">name: {{vehicle.name}} </p>
+        <p class="card-text">model: {{vehicle.model}}</p>
+        <p class="card-text">manufacturer: {{vehicle.manufacturer}}</p>
+        <p class="card-text">cost_in_credits: {{vehicle.cost_in_credits}}</p>
+        <p class="card-text">length: {{vehicle.length}}</p>
+        <p class="card-text">max_atmosphering_speed: {{vehicle.max_atmosphering_speed}}</p>
+        <p class="card-text">crew: {{vehicle.crew}}</p>
+        <p class="card-text">passengers: {{vehicle.passengers}}</p>
+        <p class="card-text">cargo_capacity: {{vehicle.cargo_capacity}}</p>
+        <p class="card-text">consumables: {{vehicle.consumables}}</p>
+        <p class="card-text">vehicle_class: {{vehicle.vehicle_class}}</p>
+        <p class="card-text">pilots: {{vehicle.pilots}}</p>
+        <p class="card-text">fims: {{vehicle.fims}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
     </div>
 </div>

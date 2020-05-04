@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SwapiService } from 'src/app/services/swapi.service';
 import { Planets, Result } from 'src/app/interfaces/swapi.interface';
 import { map } from 'rxjs/operators';
@@ -9,14 +9,26 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./planets.component.css']
 })
 export class PlanetsComponent implements OnInit {
-
+  
+  public palabra: String = '';
   public planets: Result[] = [];
+  public filtroPlanets  : Result[] = [];
   public route = "../../assets/planets/";
 
   constructor(private swapi: SwapiService) { }
  
   ngOnInit(): void {
     this.getPlanet();
+  }
+
+  public search(text: string) {
+    if (text.length > 0) {
+      this.palabra = text;
+      var filtro: Result[] = this.planets.filter(planet => planet.name == text);
+      this.planets = filtro;
+    } else {
+      this.planets = this.filtroPlanets;
+    }
   }
 
   private async getPlanet() {
@@ -31,6 +43,7 @@ export class PlanetsComponent implements OnInit {
     ).subscribe( (resp: Planets) => {
       console.log(resp.results);
       this.planets = resp.results;
+      this.filtroPlanets = resp.results;
     });
   }
 

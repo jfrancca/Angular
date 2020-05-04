@@ -1,10 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">STAR WARS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href= "../starships/starships.component.html">Starships<span class="sr-only">(current)</span></a>
+         <!--a class="nav-link" href="../species/species.component.html">Species<span class="sr-only">(current)</span></a>-->
+        
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" (ngModelChange)="search($event)" [(ngModel)]="palabra" name="palabra" type="search" placeholder="Search" aria-label="Search">
+      </form>
+    </div>
+</nav>
 <div class="contenedor">
-    <hr style="border-color:black;">
-    <h1 >Starship</h1>
+  <hr style="border-color:black;">
+  <h1 >Starships</h1>
     <div class="card position" style="width: 18rem;" *ngFor="let starship of starships">
         <img [src]="starship.image" class="card-img-top" [alt]="starship.name">
         <div class="card-body">
-        <h5 class="card-name">{{ starship.name }}</h5>
+        <h5 class="card-title">{{ starship.name }}</h5>
         <p class="card-text">model: {{ starship.model }}</p>
         <p class="card-text">manufacturer: {{ starship.manufacturer }}</p>
         <p class="card-text">cost_in_credits: {{ starship.cost_in_credits }}</p>

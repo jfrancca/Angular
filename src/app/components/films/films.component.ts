@@ -24,7 +24,7 @@ export class FilmsComponent implements OnInit {
   public search(text: string) {
     if (text.length > 0) {
       this.palabra = text;
-      var filtro: Result[] = this.films.filter(film => film.title == text)
+      var filtro: Result[] = this.films.filter(film => film.title == text);
       this.films = filtro;
     } else {
       this.films = this.filtroFilms;
